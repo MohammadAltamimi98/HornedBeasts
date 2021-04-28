@@ -28,9 +28,10 @@ class HornedBeast extends React.Component{
              <Card.Title><h2>{this.props.title}</h2></Card.Title>
             
              <Card.Img   variant="top" src={this.props.image_url}  alt={this.props.title}  title={this.props.title}/>
-             <Card.Body>
-                <Card.Text><p>{this.props.description}</p></Card.Text>
-               <Button onClick={this.increaseNumOfLikes} >Like ❤️ </Button><Card.Text><p>Number Of Likes: {this.state.numOfLikes}❤️</p></Card.Text> 
+               <Card.Body>
+                   <Card.Text><p>{this.props.description}</p></Card.Text>
+                   <Button onClick={this.increaseNumOfLikes} >Like ❤️ </Button>
+               <Card.Text><p>Number Of Likes: {this.state.numOfLikes}❤️</p></Card.Text> 
                
 
              </Card.Body>

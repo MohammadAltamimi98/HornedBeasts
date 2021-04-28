@@ -9,17 +9,35 @@ constructor(props){
     super(props);
     this.state={
         data: jsondata,
-    };
-}
+        beast:{}
+    };}
+
+    showBeast = (clickedBeast) => {
+        this.setState({
+          show: true,
+          beast: clickedBeast,
+        })
+      }
+    hideBeast = () => {
+        this.setState({
+          show: false,
+          beast: {},
+        })
+      }
+
+
+    
+
 
 
     render(){
         return (<CardDeck>
-            {this.state.data.map(beast => {
+            {this.state.data.map((element,index) => {
             return <HornedBeast 
-            image_url={beast.image_url}
-            title={beast.title}
-            description={beast.description} />
+            image_url={element.image_url}
+            title={element.title}
+            description={element.description}
+            key={index} />
             })}
             </CardDeck>
           )

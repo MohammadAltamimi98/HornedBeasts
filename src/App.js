@@ -8,6 +8,16 @@ import jsondata from './data.json';
 
 
 class App extends React.Component{
+  // constructor(props){
+  //   super(props);
+  //   this.state={
+  //     show:false,
+  //     beast={}
+  //   }
+  // }
+
+
+
 
   render(){
     return(
