@@ -1,9 +1,16 @@
 import React from 'react';
+import { Navbar,Nav,Form,FormControl,Button } from 'react-bootstrap';
 
 class Header extends React.Component {
   render(){
     return (
-      <h1>Horned Beasts</h1>
+
+      <Navbar bg="dark" variant="dark" >
+        <Navbar.Brand href="#home"><h1>Horned Beasts</h1></Navbar.Brand>
+
+
+      </Navbar>
+
     );
 
   }
@@ -13,4 +20,7 @@ class Header extends React.Component {
 }
 
 export default Header;
+
+
+
 

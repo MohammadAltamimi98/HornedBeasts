@@ -18,10 +18,19 @@ class App extends React.Component{
       numberOfHorns:'',
       data:jsonData,
       show:false,
-      details:{}
+      details:{},
+      beastData: jsonData
+
     };
   }
 
+  filterHornBeast = (horns) => {
+    if(horns === 'all') {
+      return this.setState({});
+    } else {
+      const array = this.state.beastData.filter( element => element.horns === horns);
+      this.setState({beastData: array});
+    }}
 
 
 

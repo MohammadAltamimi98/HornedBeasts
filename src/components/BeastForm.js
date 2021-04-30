@@ -8,7 +8,7 @@ class BeastForm extends React.Component{
     return <>
 
       <Form>
-        <select onChange={this.newState} class="custom-select custom-select-lg mb-3">
+        <select onChange={this.filterFunction} class="custom-select custom-select-lg mb-3">
           <option value="All" selected>All</option>
           <option value="1">1</option>
           <option value="2">2</option>
