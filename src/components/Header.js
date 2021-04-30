@@ -15,13 +15,14 @@ class Header extends React.Component {
       <div>
 
         <Navbar bg="dark" variant="dark" >
-          <Navbar.Brand href="#home"><h1>Horned Beasts</h1></Navbar.Brand>
+          <Navbar.Brand href="#home" style={{position:'relative', left:'500px'}}><h1>Horned Beasts</h1></Navbar.Brand>
 
         </Navbar>
 
-
+        <br/>
         <header>
           <h1>My Collection of Horned Beasts</h1>
+
           <BeastForm
             filterData={this.props.filterData}
             numberOfHorns={this.props.numberOfHorns}

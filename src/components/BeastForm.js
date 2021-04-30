@@ -6,7 +6,6 @@ class BeastForm extends React.Component{ newState = horns => this.props.updateSt
 
     filter = (event) => {
       event.preventDefault();
-      // console.log(this.props.filterData);
       this.props.filterData(event);
     }
 
@@ -14,13 +13,13 @@ class BeastForm extends React.Component{ newState = horns => this.props.updateSt
       return (
         <Form onSubmit={this.filter}>
           <Form.Group controlId="exampleForm.ControlSelect1">
-            <Form.Label>Choose Number of Horns: </Form.Label>
+            <Form.Label>Select The Number of Horns: </Form.Label>
             <Form.Control onChange={this.newState} as="select" name="numberOfHorns" defaultValue={'All'}>
-              <option value="All">All</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="100">100</option>
+              <option value="All">View All beasts</option>
+              <option value="1">One-horn beasts</option>
+              <option value="2">Two-horn beasts</option>
+              <option value="3">Three-horn beasts </option>
+              <option value="100">A hundred-horn beasts</option>
             </Form.Control>
             <Button variant="primary" type="submit">
               Filter

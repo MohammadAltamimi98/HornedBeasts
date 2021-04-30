@@ -26,13 +26,13 @@ class App extends React.Component{
 
   filterData = (event)=>{
     if(this.state.numberOfHorns !== 'All'){
-      this.setState({data : jsonData.filter(elm=>elm.horns === Number(this.state.numberOfHorns))});
+      this.setState({data : jsonData.filter(element=>element.horns === Number(this.state.numberOfHorns))});
     }else{
       this.setState({data : jsonData});
     }
   }
 
-  updateState = horns => this.setState({numberOfHorns : horns.target.value});
+  updateState = creatures => this.setState({numberOfHorns : creatures.target.value});
 
 
 
