@@ -45,7 +45,6 @@ render(){
       <Header/>
       <SelectedBeast show={this.state.show} close={this.close} details={this.state.details}/>
       <Main data={this.state.data} viewBeast={this.viewBeast}/>
-
       <Footer/>
     </div>
   );
