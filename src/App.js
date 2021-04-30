@@ -3,8 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
-import jsonSData from './data.json';
+import jsonData from './data.json';
 import SelectedBeast from './components/SelectedBeast';
+import BeastForm from './components/BeastForm';
 
 
 
@@ -14,11 +15,24 @@ class App extends React.Component{
     super(props);
 
     this.state={
-      data:jsonSData,
+      numberOfHorns:'',
+      data:jsonData,
       show:false,
       details:{}
     };
   }
+
+
+  filterData = (event)=>{
+    if(this.state.numberOfHorns !== 'All'){
+      this.setState({data : jsonData.filter(elm=>elm.horns === Number(this.state.numberOfHorns))});
+    }else{
+      this.setState({data : jsonData});
+    }
+  }
+
+  updateState = horns => this.setState({numberOfHorns : horns.target.value});
+
 
 
 viewBeast = (e) => {
@@ -43,6 +57,10 @@ render(){
   return(
     <div>
       <Header/>
+      <BeastForm filterData={this.props.filterData}
+        numberOfHorns={this.props.numberOfHorns}
+        updateState={this.props.updateState}/>
+
       <SelectedBeast show={this.state.show} close={this.close} details={this.state.details}/>
       <Main data={this.state.data} viewBeast={this.viewBeast}/>
       <Footer/>
