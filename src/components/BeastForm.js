@@ -2,16 +2,16 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-class BeastForm extends React.Component{ newState = horns => this.props.updateState(horns);
-
-    filter = (event) => {
+class BeastForm extends React.Component{
+    newState = horns => this.props.updateState(horns);
+    filterBeasts = (event) => {
       event.preventDefault();
       this.props.filterData(event);
     }
 
     render() {
       return (
-        <Form onSubmit={this.filter}>
+        <Form onSubmit={this.filterBeasts}>
           <Form.Group controlId="exampleForm.ControlSelect1">
             <Form.Label>Select The Number of Horns: </Form.Label>
             <Form.Control onChange={this.newState} as="select" name="numberOfHorns" defaultValue={'All'}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar,Nav,Form,FormControl,Button } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import BeastForm from './BeastForm';
 
 class Header extends React.Component {

@@ -5,7 +5,6 @@ import Header from './components/Header';
 import Main from './components/Main';
 import jsonData from './data.json';
 import SelectedBeast from './components/SelectedBeast';
-import BeastForm from './components/BeastForm';
 
 
 
