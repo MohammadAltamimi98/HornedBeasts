@@ -14,7 +14,8 @@ class Main extends React.Component{
             title={element.title}
             description={element.description}
             key={index}
-            viewBeast={this.props.viewBeast}/>;
+            viewBeast={this.props.viewBeast}
+            close={this.props.close} />;
         }
         )
         }
