@@ -23,15 +23,6 @@ class App extends React.Component{
   }
 
 
-  filterData = (event)=>{
-    if(this.state.numberOfHorns !== 'All'){
-      this.setState({data : jsonData.filter(elm=>elm.horns === Number(this.state.numberOfHorns))});
-    }else{
-      this.setState({data : jsonData});
-    }
-  }
-
-  updateState = horns => this.setState({numberOfHorns : horns.target.value});
 
 
 
@@ -57,10 +48,7 @@ render(){
   return(
     <div>
       <Header/>
-      <BeastForm filterData={this.props.filterData}
-        numberOfHorns={this.props.numberOfHorns}
-        updateState={this.props.updateState}/>
-
+      <BeastForm/>
       <SelectedBeast show={this.state.show} close={this.close} details={this.state.details}/>
       <Main data={this.state.data} viewBeast={this.viewBeast}/>
       <Footer/>

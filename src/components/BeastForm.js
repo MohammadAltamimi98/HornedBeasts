@@ -2,13 +2,7 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 
 class BeastForm extends React.Component{
-    newState = horns => this.props.updateState(horns);
 
-  filter = (event) => {
-    event.preventDefault();
-    // console.log(this.props.filterData);
-    this.props.filterData(event);
-  }
 
   render(){
     return <>
