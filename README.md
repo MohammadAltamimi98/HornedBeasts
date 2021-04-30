@@ -1,7 +1,11 @@
 # Features for HornedBeasts app
 
+> -  In this file You will read the feature name and its number as well as time details for its creation:
 
-Number and name of feature:  #1: Display images
+<br>
+<br>
+ 
+   ## 1. Display images
 
 ---
 - Estimate of time needed to complete:1 hour
@@ -15,7 +19,7 @@ Number and name of feature:  #1: Display images
 <br>
 <br>
 
-Number and name of feature:  #2: Allow users to vote for their favorite beast
+ ## 2. Allow users to vote for their favorite beast
 
 ---
 - Estimate of time needed to complete:1 hour
@@ -29,7 +33,7 @@ Number and name of feature:  #2: Allow users to vote for their favorite beast
 <br>
 <br>
 
-Number and name of feature:  #3: Bootstrap
+ ## 3. Bootstrap
 
 ---
 
@@ -45,7 +49,7 @@ Number and name of feature:  #3: Bootstrap
 <br>
 <br>
 
-Number and name of feature:   #4: Display a Modal
+  ## 4. Display a Modal
  
  ---
 
@@ -53,11 +57,20 @@ Number and name of feature:   #4: Display a Modal
 
 - Start time:3:27
 
-- Finish time:4:45
+- Finish time:5:45
 
-- Actual time needed to complete: 1 hour and 18 minutes.
+- Actual time needed to complete: 2 hour and 18 minutes.
 
 
+
+<br>
+<br>
+
+
+> ** note: these time duration are based on implementation after research so do not be alarmed if :
+ 1. You think as you code simultaneously.(not plan ahead).
+
+ 2. You are doing it for teh first time. 
 
 
 <!-- 
