@@ -19,19 +19,20 @@ class App extends React.Component{
       data:jsonData,
       show:false,
       details:{},
-      beastData: jsonData
+
 
     };
   }
 
-  filterHornBeast = (horns) => {
-    if(horns === 'all') {
-      return this.setState({});
-    } else {
-      const array = this.state.beastData.filter( element => element.horns === horns);
-      this.setState({beastData: array});
-    }}
+  filterData = (event)=>{
+    if(this.state.numberOfHorns !== 'All'){
+      this.setState({data : jsonData.filter(elm=>elm.horns === Number(this.state.numberOfHorns))});
+    }else{
+      this.setState({data : jsonData});
+    }
+  }
 
+  updateState = horns => this.setState({numberOfHorns : horns.target.value});
 
 
 
@@ -56,8 +57,10 @@ close=()=>{
 render(){
   return(
     <div>
-      <Header/>
-      <BeastForm/>
+      <Header
+        filterData={this.filterData}
+        numberOfHorns={this.state.numberOfHorns}
+        updateState={this.updateState}/>
       <SelectedBeast show={this.state.show} close={this.close} details={this.state.details}/>
       <Main data={this.state.data} viewBeast={this.viewBeast}/>
       <Footer/>
@@ -66,6 +69,5 @@ render(){
 
 };
 }
-
 
 export default App;
