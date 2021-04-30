@@ -15,7 +15,7 @@ class App extends React.Component{
 
     this.state={
       data:jsonSData,
-      show:true,
+      show:false,
       details:{}
     };
   }
