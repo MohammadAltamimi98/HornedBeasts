@@ -5,42 +5,38 @@ import Button from 'react-bootstrap/Button';
 
 
 class SelectedBeast extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={
-            show:false,
-          };
 
-    }
+  render(){
+    return (
 
-    render(){
-        return (
-    <Modal.Dialog>
-       <Modal.Header closeButton  onShow={this.props.show} onHide={this.props.hide}>
-          <Modal.Title>{this.props.title}</Modal.Title>
-      </Modal.Header>
+      <Modal.Dialog>
+        <Modal.Header closeButton onShow={this.props.show} onHide={this.props.close}>
 
-      <Modal.Body>
-          <img  src={this.props.image_url}  alt={this.props.title}  title={this.props.title}/>
-          <p>{this.props.description}</p>
-          <Button onClick={this.increaseNumOfLikes} >Like ❤️ </Button>
-          <p>Number Of Likes: {this.state.numOfLikes}❤️</p> 
-      </Modal.Body>
+          <Modal.Title>{this.props.details.title}</Modal.Title>
+        </Modal.Header>
 
-      <Modal.Footer>
-         <Button variant="secondary">Close</Button>
-        <Button variant="primary" onClick={this.props.hideBeast}>Save changes</Button>
-      </Modal.Footer>
+        <Modal.Body>
+          <img src={this.props.details.image_url} alt={this.props.details.title} title={this.props.details.title}/>
+          <p>{this.props.details.description}</p>
+          {/* <Button onClick={this.details.increaseNumOfLikes} >Like ❤️ </Button>
+          <p>Number Of Likes: {this.details.state.numOfLikes}❤️</p>  */}
+        </Modal.Body>
 
-    </Modal.Dialog>
-        )
-    }
+        <Modal.Footer>
+          <Button variant="secondary" onClick={this.props.close}>Close</Button>
+          {/* <Button variant="primary" onClick={this.props.hideBeast}>Save changes</Button> */}
+        </Modal.Footer>
+
+      </Modal.Dialog>
+    );
+  }
 }
 
 
 
 
-  
+
 
 
 export default SelectedBeast;
+
