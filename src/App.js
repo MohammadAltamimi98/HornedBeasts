@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
-import jsonSData from './data.json';
+import jsonData from './data.json';
 import SelectedBeast from './components/SelectedBeast';
 
 
@@ -14,11 +14,25 @@ class App extends React.Component{
     super(props);
 
     this.state={
-      data:jsonSData,
+      numberOfHorns:'',
+      data:jsonData,
       show:false,
-      details:{}
+      details:{},
+
+
     };
   }
+
+  filterData = (event)=>{
+    if(this.state.numberOfHorns !== 'All'){
+      this.setState({data : jsonData.filter(element=>element.horns === Number(this.state.numberOfHorns))});
+    }else{
+      this.setState({data : jsonData});
+    }
+  }
+
+  updateState = creatures => this.setState({numberOfHorns : creatures.target.value});
+
 
 
 viewBeast = (e) => {
@@ -42,7 +56,10 @@ close=()=>{
 render(){
   return(
     <div>
-      <Header/>
+      <Header
+        filterData={this.filterData}
+        numberOfHorns={this.state.numberOfHorns}
+        updateState={this.updateState}/>
       <SelectedBeast show={this.state.show} close={this.close} details={this.state.details}/>
       <Main data={this.state.data} viewBeast={this.viewBeast}/>
       <Footer/>
@@ -51,6 +68,5 @@ render(){
 
 };
 }
-
 
 export default App;
