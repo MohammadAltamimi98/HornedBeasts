@@ -1,30 +1,28 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-import jsondata from '../data.json';
-import CardDeck from "react-bootstrap/CardDeck";
+import CardDeck from 'react-bootstrap/CardDeck';
 
 
 class Main extends React.Component{
-constructor(props){
-    super(props);
-    this.state={
-        data: jsondata,
-    };
-}
 
+  render(){
+    return <>
+      <CardDeck>
+        {this.props.data.map((element,index) => {
+          return <HornedBeast
+            image_url={element.image_url}
+            title={element.title}
+            description={element.description}
+            key={index}
+            viewBeast={this.props.viewBeast}
+            close={this.props.close} />;
+        }
+        )
+        }
+      </CardDeck>
+    </> ;
 
-    render(){
-        return (<CardDeck>
-            {this.state.data.map(beast => {
-            return <HornedBeast 
-            image_url={beast.image_url}
-            title={beast.title}
-            description={beast.description} />
-            })}
-            </CardDeck>
-          )
-                
-        }   
+  }
 
 }
 

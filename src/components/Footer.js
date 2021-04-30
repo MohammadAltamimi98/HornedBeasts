@@ -2,17 +2,17 @@ import React from 'react';
 
 
 class Footer extends React.Component{
-render(){
+  render(){
     return (
-        <footer>
+      <footer>
 
         <h4>&copy; | By Mohammad Altamimi </h4>
-        
-        </footer>
 
-    )
+      </footer>
+
+    );
+  }
 }
-}
 
 
- export default Footer;
+export default Footer;
