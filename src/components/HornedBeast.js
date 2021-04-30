@@ -19,13 +19,10 @@ class HornedBeast extends React.Component{
 
  displayBeast = ()=>{
    this.props.viewBeast(this.props);
-   console.log('this',this);
-   console.log('this.props',this.props);
-   console.log('this.viewBeast',this.viewBeast);
-   console.log('this.props.viewBeast',this.props.viewBeast);
-   //    this.setState({numOfLikes : this.state.numOfLikes + 1});
 
  }
+
+
 
 
  render(){

@@ -15,17 +15,18 @@ class App extends React.Component{
 
     this.state={
       data:jsonSData,
-      show:false,
+      show:true,
       details:{}
     };
   }
 
-viewBeast = (beast) => {
+
+viewBeast = (e) => {
 
   this.setState(
     {
       show: true,
-      details: beast
+      details: e
     });
 
 }
@@ -42,8 +43,9 @@ render(){
   return(
     <div>
       <Header/>
-      <Main data={this.state.data} viewBeast={this.viewBeast}/>
       <SelectedBeast show={this.state.show} close={this.close} details={this.state.details}/>
+      <Main data={this.state.data} viewBeast={this.viewBeast}/>
+
       <Footer/>
     </div>
   );
