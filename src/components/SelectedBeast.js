@@ -9,8 +9,7 @@ class SelectedBeast extends React.Component{
         super(props);
         this.state={
             show:false,
-            // beast={}
-        };
+          };
 
     }
 
