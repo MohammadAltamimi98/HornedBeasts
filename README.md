@@ -67,6 +67,25 @@
 <br>
 
 
+ ## 5.  Filter by Numbers of Horns
+ 
+ ---
+
+- Estimate of time needed to complete: 2 hours
+
+- Start time:2:30
+
+- Finish time:5:30
+
+- Actual time needed to complete: 3 hour.
+
+
+
+<br>
+<br>
+
+
+
 > ** note: these time duration are based on implementation after research so do not be alarmed if :
  1. You think as you code simultaneously.(not plan ahead).
 
